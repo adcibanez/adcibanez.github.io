@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <script>
+  function fourconversions(c1)
+  var c1 = document.getElementById(c1);
+  if(c1.value == "ftoc"){
+   function clickbtn()
+
+{
+
+  let a='', b='',x=0,y=0;
+
+
+   a=prompt('The first number:');
+
+   b=prompt('The second number:');
+
+
+   x=parseInt(a);
+
+   y=parseInt(b);
+
+  
+
+   let z=x+y;
+
+
+   document.write('<h2>The sum is:'+z+'</h2> <br>')
+
+}
+  }
+ 
+</script>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,41 +69,15 @@ h1 {letter-spacing: 6px}
 <!-- Photo Grid -->
 <center>
    <h1> Select a Conversion:</h1>
-    <select id="conversion">
+    <select id="conversion" name="conversion" onchange="fourconversions(this.id)">
      <option>Select One</option>
      <option value="ftoc">1.) Fahrenheit to Celsius </option>
      <option value="ctof">2.) Celsius to Fahrenheit </option>
      <option value="mtof">3.) Meters to Feet </option>
      <option value="ftom">2.) Feet to Meters </option>
    </select>
-<button onclick="conversion()">Select</button>
-
-<script>
- function clickbtn()
-
-{
-
-  let a='', b='',x=0,y=0;
-
-
-   a=prompt('The first number:');
-
-   b=prompt('The second number:');
-
-
-   x=parseInt(a);
-
-   y=parseInt(b);
-
-  
-
-   let z=x+y;
-
-
-   document.write('<h2>The sum is:'+z+'</h2> <br>')
-
-}
-</script>
+ <h1>Add a number:</h1>
+ <button onclick="clickbtn()">Compute</button>
  </center>
   
 <!-- End Page Content -->
