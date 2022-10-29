@@ -40,10 +40,10 @@ h1 {letter-spacing: 6px}
    <h1> Select a Conversion:</h1>
     <select id="conversion">
      <option>Select One</option>
-     <option>1.) Fahrenheit to Celsius </option>
-     <option>2.) Celsius to Fahrenheit </option>
-     <option>3.) Meters to Feet </option>
-     <option>2.) Feet to Meters </option>
+     <option value="ftoc">1.) Fahrenheit to Celsius </option>
+     <option value="ctof">2.) Celsius to Fahrenheit </option>
+     <option value="mtof">3.) Meters to Feet </option>
+     <option value="ftom">2.) Feet to Meters </option>
    </select>
    <input type="text" id="txtvalue"/>
 
@@ -54,7 +54,29 @@ h1 {letter-spacing: 6px}
 function conversion()
  {
  var d=document.getElementById("conversion");
- var name="
+ var name="conversion";
+  
+ if (name=="ftoc")
+ {
+    let a='', b='',x=0,y=0;
+
+
+   a=prompt('The first number:');
+
+   b=prompt('The second number:');
+
+
+   x=parseInt(a);
+
+   y=parseInt(b);
+
+  
+
+   let z=x+y;
+
+
+   document.write('<h2>The sum is:'+z+'</h2> <br>')
+ }
  }
 </script>
  </center>
