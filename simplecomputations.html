@@ -38,13 +38,49 @@ h1 {letter-spacing: 6px}
 <!-- Photo Grid -->
 <div class="w3-row-padding w3-grayscale" style="margin-bottom:128px">
   <div class="w3-half">
-    <img src="/w3images/wedding.jpg" style="width:100%">
-    <img src="/w3images/rocks.jpg" style="width:100%">
-    <img src="/w3images/falls2.jpg" style="width:100%">
-    <img src="/w3images/paris.jpg" style="width:100%">
-    <img src="/w3images/nature.jpg" style="width:100%">
-    <img src="/w3images/mist.jpg" style="width:100%">
-    <img src="/w3images/paris.jpg" style="width:100%">
+   <h1> Select a Conversion:</h1>
+    <select id="conversion">
+     <option>-- Select One</option>
+     <option>1.) Fahrenheit to Celsius </option>
+     <option>2.) Celsius to Fahrenheit </option>
+     <option>3.) Meters to Feet </option>
+     <option>2.) Feet to Meters </option>
+   </select>
+   <h1>Add two numbers</h1>
+
+<button onclick="clickbtn()">Compute the sum</button>
+
+
+<script>
+
+function clickbtn()
+
+{
+
+  let a='', b='',x=0,y=0;
+
+
+   a=prompt('The first number:');
+
+   b=prompt('The second number:');
+
+
+   x=parseInt(a);
+
+   y=parseInt(b);
+
+  
+
+   let z=x+y;
+
+
+   document.write('<h2>The sum is:'+z+'</h2> <br>')
+
+}
+
+   
+
+</script>
   </div>
 
   <div class="w3-half">
