@@ -6,20 +6,20 @@ function computef1()
 
 {
 
-  var f;
+  var fc;
 
 
   // Retrieve the user input 
 
   celsiuss = document.getElementById("f1").value*1;  // *1 Converts the result to number
-  console.log(celsiuss);
+  console.log(fc);
 
   console.logYes;
 
 
   // Compute the sum
 
-  let f  = 5/9 * (celsiuss – 32);
+  let z  = 5/9 * (fc – 32);
 
 
 
@@ -27,106 +27,10 @@ function computef1()
 
    document.getElementById("fahrenheitlabel").innerHTML='°C = ';
 
-   document.getElementById("fahrenheit").value=f;
+   document.getElementById("fahrenheit").value=z;
 
 }
 
-function computec1()
-  {
-
-  var x,y;
-
-
-  // Retrieve the user input 
-
-  x = document.getElementById("c1").value*1;  // *1 Converts the result to number
-
-
-  console.log(x);
-
-  console.logYes;
-
-
-  // Compute the sum
-
-  let c = (9/5 * fahrenheitt) + 32
-
-  // Display the result
-
-  document.getElementById("sumlabel").innerHTML='°F =';
-
-   document.getElementById("sum").value=c;
-
-
-}
-
-function computem1()
-  {
-
-  var x,y;
-
-
-  // Retrieve the user input 
-
-  x = document.getElementById("n1").value*1;  // *1 Converts the result to number
-
-  y = document.getElementById("n2").value*1;  // to avoid having to use parseFloat
-
-
-  console.log(x);
-
-  console.logYes;
-
-
-  // Compute the sum
-
-  let z  = x+y;
-
-
-  // Display the result
-
-  document.getElementById("sumlabel").innerHTML='The sum of '
-
-       +x+' and '+y+' is:';
-
-   document.getElementById("sum").value=z;
-
-
-}   
-
-  function computefeet1()
-  {
-
-  var x,y;
-
-
-  // Retrieve the user input 
-
-  x = document.getElementById("n1").value*1;  // *1 Converts the result to number
-
-  y = document.getElementById("n2").value*1;  // to avoid having to use parseFloat
-
-
-  console.log(x);
-
-  console.logYes;
-
-
-  // Compute the sum
-
-  let z  = x+y;
-
-
-  // Display the result
-
-  document.getElementById("sumlabel").innerHTML='The sum of '
-
-       +x+' and '+y+' is:';
-
-   document.getElementById("sum").value=z;
-
-
-}
 </script>
 
 </body>
