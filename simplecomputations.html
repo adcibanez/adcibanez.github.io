@@ -36,30 +36,28 @@ function computef1()
 
 {
 
-  var x;
+  var c;
 
 
   // Retrieve the user input 
 
-  x = document.getElementById("n1").value*1;  // *1 Converts the result to number
+  c = document.getElementById("c1").value*1;  // *1 Converts the result to number
 
-  console.log(x);
+  console.log(c);
 
   console.logYes;
 
 
   // Compute the sum
 
-  let z  = (9/5 * x) + 32;
+  let f  = (9/5 * c) + 32;
 
 
   // Display the result
 
-  document.getElementById("sumlabel").innerHTML='°F = '
+  document.getElementById("celsiuslabel").innerHTML='°F =';
 
-       +x+' and '+y+' is:';
-
-   document.getElementById("sum").value=z;
+   document.getElementById("celsius").value=f;
 
 
 }
