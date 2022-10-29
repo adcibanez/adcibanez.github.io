@@ -6,13 +6,12 @@ function computef1()
 
 {
 
-  var celsiuss, fahrenheitt, meterss, feett;
+  var f;
 
 
   // Retrieve the user input 
 
   celsiuss = document.getElementById("f1").value*1;  // *1 Converts the result to number
-  fahrenheitt = document.getElementById("c1").value*1;
   console.log(celsiuss);
 
   console.logYes;
@@ -21,16 +20,118 @@ function computef1()
   // Compute the sum
 
   let f  = 5/9 * (celsiuss – 32);
-  let c = (9/5 * fahrenheitt) + 32
+
 
 
   // Display the result
 
    document.getElementById("fahrenheitlabel").innerHTML='°C = ';
 
-   document.getElementById("fahrenheit").value=z;
+   document.getElementById("fahrenheit").value=f;
 
 }
+
+function computec1()
+  {
+
+  var x,y;
+
+
+  // Retrieve the user input 
+
+  x = document.getElementById("c1").value*1;  // *1 Converts the result to number
+
+
+  console.log(x);
+
+  console.logYes;
+
+
+  // Compute the sum
+
+  let c = (9/5 * fahrenheitt) + 32
+
+  // Display the result
+
+  document.getElementById("sumlabel").innerHTML='°F =';
+
+   document.getElementById("sum").value=c;
+
+
+}
+
+function computem1()
+  {
+
+  var x,y;
+
+
+  // Retrieve the user input 
+
+  x = document.getElementById("n1").value*1;  // *1 Converts the result to number
+
+  y = document.getElementById("n2").value*1;  // to avoid having to use parseFloat
+
+
+  console.log(x);
+
+  console.logYes;
+
+
+  // Compute the sum
+
+  let z  = x+y;
+
+
+  // Display the result
+
+  document.getElementById("sumlabel").innerHTML='The sum of '
+
+       +x+' and '+y+' is:';
+
+   document.getElementById("sum").value=z;
+
+
+}   
+
+  function computefeet1()
+  {
+
+  var x,y;
+
+
+  // Retrieve the user input 
+
+  x = document.getElementById("n1").value*1;  // *1 Converts the result to number
+
+  y = document.getElementById("n2").value*1;  // to avoid having to use parseFloat
+
+
+  console.log(x);
+
+  console.logYes;
+
+
+  // Compute the sum
+
+  let z  = x+y;
+
+
+  // Display the result
+
+  document.getElementById("sumlabel").innerHTML='The sum of '
+
+       +x+' and '+y+' is:';
+
+   document.getElementById("sum").value=z;
+
+
+}
+</script>
+
+</body>
+
+</html>
  </script>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
@@ -108,17 +209,17 @@ h1 {letter-spacing: 6px}
      <br>
      <h2>
 
-     <label for="n1">Number</label> 
+     <label for="meters1">Meters: </label> 
 
-     <input id="n1" name="n1" type="number">
+     <input id="meters1" name="meters1" type="number">
 
-     <button onclick="computesum()"> Compute</button>
+     <button onclick="computem1()"> Compute</button>
      </h2>
      <h2>
 
-     <label for="sum" id="sumlabel">The sum is:</label>  
+     <label for="meters" id="meterslabel"> Feet = </label>  
 
-     <input id="sum" name="sum" type="number" readonly></input>
+     <input id="meters" name="meters" type="number" readonly></input>
 
      </h2>
      <br>
@@ -126,17 +227,17 @@ h1 {letter-spacing: 6px}
      <br>
      <h2>
 
-     <label for="n1">Number</label> 
+     <label for="feet1">Number</label> 
 
      <input id="n1" name="n1" type="number">
 
-     <button onclick="computesum()"> Compute</button>
+     <button onclick="computefeet1()"> Compute</button>
      </h2>
      <h2>
 
-     <label for="sum" id="sumlabel">The sum is:</label>  
+     <label for="feet" id="feetlabel">Meters = </label>  
 
-     <input id="sum" name="sum" type="number" readonly></input>
+     <input id="feet" name="feet" type="number" readonly></input>
 
      </h2>
      <br>    
