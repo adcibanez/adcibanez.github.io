@@ -2,101 +2,38 @@
 <html>
 <head>
  <script>
-function fotc()
+function computesum()
 
 {
 
-  let a='', b='',x=0,y=0;
+  var x;
 
 
-   a=prompt('The first number:');
+  // Retrieve the user input 
 
-   b=prompt('The second number:');
+  x = document.getElementById("n1").value*1;  // *1 Converts the result to number
 
+  console.log(x);
 
-   x=parseInt(a);
-
-   y=parseInt(b);
-
-  
-
-   let z=x+y;
+  console.logYes;
 
 
-   document.write('<h2>The sum is:'+z+'</h2> <br>');
- 
- function ctof()
+  // Compute the sum
 
-{
-
-  let a='', b='',x=0,y=0;
+  let z  = x+y;
 
 
-   a=prompt('The first number:');
+  // Display the result
 
-   b=prompt('The second number:');
+   document.getElementById("sumlabel").innerHTML='It is:';
 
-
-   x=parseInt(a);
-
-   y=parseInt(b);
-
-  
-
-   let z=x+y;
-
-
-   document.write('<h2>The sum is:'+z+'</h2> <br>')
- 
- function ftom()
-
-{
-
-  let a='', b='',x=0,y=0;
-
-
-   a=prompt('The first number:');
-
-   b=prompt('The second number:');
-
-
-   x=parseInt(a);
-
-   y=parseInt(b);
-
-  
-
-   let z=x+y;
-
-
-   document.write('<h2>The sum is:'+z+'</h2> <br>')
- 
- function mtof()
-
-{
-
-  let a='', b='',x=0,y=0;
-
-
-   a=prompt('The first number:');
-
-   b=prompt('The second number:');
-
-
-   x=parseInt(a);
-
-   y=parseInt(b);
-
-  
-
-   let z=x+y;
-
-
-   document.write('<h2>The sum is:'+z+'</h2> <br>')
+   document.getElementById("sum").value=z;
 
 
 }
-</script>
+
+   
+ </script>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -135,19 +72,75 @@ h1 {letter-spacing: 6px}
 <center>
 <h1>1.) Fahrenheit to Celsius </h1>
      <br>
-     <button onclick="ftoc()">Compute the sum</button>
+     <p>
+
+     <label for="n1">Number</label> 
+
+     <input id="n1" name="n1" type="number">
+
+     <button onclick="computesum()"> Compute</button>
+     </p>
+     <p>
+
+     <label for="sum" id="sumlabel">The sum is:</label>  
+
+     <input id="sum" name="sum" type="number" readonly></input>
+
+     </p>
      <br>
-<h1">2.) Celsius to Fahrenheit </h1>
+<h1>2.) Celsius to Fahrenheit </h1>
      <br>
-     <button onclick="ctof()">Compute the sum</button>
+     <p>
+
+     <label for="n1">Number</label> 
+
+     <input id="n1" name="n1" type="number">
+
+     <button onclick="computesum()"> Compute</button>
+     </p>
+     <p>
+
+     <label for="sum" id="sumlabel">The sum is:</label>  
+
+     <input id="sum" name="sum" type="number" readonly></input>
+
+     </p>
      <br>
-<h1">3.) Meters to Feet </h1>
+<h1>3.) Meters to Feet </h1>
      <br>
-     <button onclick="mtof()">Compute the sum</button>
+     <p>
+
+     <label for="n1">Number</label> 
+
+     <input id="n1" name="n1" type="number">
+
+     <button onclick="computesum()"> Compute</button>
+     </p>
+     <p>
+
+     <label for="sum" id="sumlabel">The sum is:</label>  
+
+     <input id="sum" name="sum" type="number" readonly></input>
+
+     </p>
      <br>
-<h1">2.) Feet to Meters </h1>
+<h1>2.) Feet to Meters </h1>
      <br>
-     <button onclick="ftom()">Compute the sum</button>
+     <p>
+
+     <label for="n1">Number</label> 
+
+     <input id="n1" name="n1" type="number">
+
+     <button onclick="computesum()"> Compute</button>
+     </p>
+     <p>
+
+     <label for="sum" id="sumlabel">The sum is:</label>  
+
+     <input id="sum" name="sum" type="number" readonly></input>
+
+     </p>
      <br>    
    </select>
  <h1>Add a number:</h1>
