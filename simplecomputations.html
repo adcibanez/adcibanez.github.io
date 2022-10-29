@@ -2,16 +2,16 @@
 <html>
 <head>
  <script>
-function computesum()
+function computef1()
 
 {
 
-  var x;
+  var x,y;
 
 
   // Retrieve the user input 
 
-  x = document.getElementById("n1").value*1;  // *1 Converts the result to number
+  x = document.getElementById("f1").value*1;  // *1 Converts the result to number
 
   console.log(x);
 
@@ -20,14 +20,14 @@ function computesum()
 
   // Compute the sum
 
-  let z  = x+y;
+  let z  = (9/5 * x) + 32;
 
 
   // Display the result
 
-   document.getElementById("sumlabel").innerHTML='It is:';
+   document.getElementById("fahrenheitlabel").innerHTML='Fahrenheit:';
 
-   document.getElementById("sum").value=z;
+   document.getElementById("fahrenheit").value=z;
 
 
 }
@@ -74,17 +74,17 @@ h1 {letter-spacing: 6px}
      <br>
      <p>
 
-     <label for="n1">Number</label> 
+     <label for="f1">Fahrenheit</label> 
 
-     <input id="n1" name="n1" type="number">
+     <input id="f1" name="f1" type="number">
 
-     <button onclick="computesum()"> Compute</button>
+     <button onclick="computef1()">Convert Fahrenheit to Celsius</button>
      </p>
      <p>
 
-     <label for="sum" id="sumlabel">The sum is:</label>  
+     <label for="fahrenheit" id="fahrenheitlabel">Fahrenheit:</label>  
 
-     <input id="sum" name="sum" type="number" readonly></input>
+     <input id="fahrenheit" name="fahrenheit" type="number" readonly></input>
 
      </p>
      <br>
@@ -143,8 +143,6 @@ h1 {letter-spacing: 6px}
      </p>
      <br>    
    </select>
- <h1>Add a number:</h1>
- <button onclick="clickbtn()">Compute</button>
  </center>
   
 <!-- End Page Content -->
