@@ -45,30 +45,33 @@ h1 {letter-spacing: 6px}
      <option value="mtof">3.) Meters to Feet </option>
      <option value="ftom">2.) Feet to Meters </option>
    </select>
-   <input type="text" id="txtvalue"/>
-
 <button onclick="conversion()">Select</button>
 
 <script>
-
-function conversion()
- {
- var d=document.getElementById("conversion");
- var name="conversion";
-  
- if (name=="ftoc")
- {
-  <h1>Add two numbers</h1>
-
-<button onclick="clickbtn()">Compute the sum</button>
-
-
-<script>
-
-function clickbtn()
+ function clickbtn()
 
 {
- }
+
+  let a='', b='',x=0,y=0;
+
+
+   a=prompt('The first number:');
+
+   b=prompt('The second number:');
+
+
+   x=parseInt(a);
+
+   y=parseInt(b);
+
+  
+
+   let z=x+y;
+
+
+   document.write('<h2>The sum is:'+z+'</h2> <br>')
+
+}
 </script>
  </center>
   
