@@ -6,21 +6,22 @@ function computef1()
 
 {
 
-  var x,y;
+  var celsiuss, fahrenheitt, meterss, feett;
 
 
   // Retrieve the user input 
 
-  x = document.getElementById("f1").value*1;  // *1 Converts the result to number
-
-  console.log(x);
+  celsiuss = document.getElementById("f1").value*1;  // *1 Converts the result to number
+  fahrenheitt = document.getElementById("c1").value*1;
+  console.log(celsiuss);
 
   console.logYes;
 
 
   // Compute the sum
 
-  let z  = 5/9 * (°F – 32);
+  let f  = 5/9 * (celsiuss – 32);
+  let c = (9/5 * fahrenheitt) + 32
 
 
   // Display the result
@@ -28,37 +29,6 @@ function computef1()
    document.getElementById("fahrenheitlabel").innerHTML='°C = ';
 
    document.getElementById("fahrenheit").value=z;
-
-
-}
-
-   function computec1()
-
-{
-
-  var c;
-
-
-  // Retrieve the user input 
-
-  c = document.getElementById("c1").value*1;  // *1 Converts the result to number
-
-  console.log(c);
-
-  console.logYes;
-
-
-  // Compute the sum
-
-  let f  = (9/5 * c) + 32;
-
-
-  // Display the result
-
-  document.getElementById("celsiuslabel").innerHTML='°F =';
-
-   document.getElementById("celsius").value=f;
-
 
 }
  </script>
