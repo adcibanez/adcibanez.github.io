@@ -2,36 +2,73 @@
 <html>
 <head>
  <script>
-function computef1()
+  function computesum()
 
 {
 
-  var fc;
+  var w, x, y, z;
 
 
   // Retrieve the user input 
 
-  celsiuss = document.getElementById("f1").value*1;  // *1 Converts the result to number
-  console.log(fc);
+  w = document.getElementById("f1").value*1;  // *1 Converts the result to number
+
+  x = document.getElementById("c1").value*2;  // to avoid having to use parseFloat
+ 
+  y = document.getElementById("m1").value*3;  // to avoid having to use parseFloat
+ 
+  z = document.getElementById("feet1").value*4;  // to avoid having to use parseFloat
+
+
+  console.log(w);
+  console.log(x);
+  console.log(y);
+  console.log(z);
 
   console.logYes;
 
 
   // Compute the sum
 
-  let z  = 5/9 * (fc – 32);
-
-
+  let f  = 5/9(w – 32);
+  let c  = 5/9(x – 32);
+  let m  = 5/9(y – 32);
+  let feet  = 5/9(z – 32);
 
   // Display the result
 
-   document.getElementById("fahrenheitlabel").innerHTML='°C = ';
+  document.getElementById("fahrenheitlabel").innerHTML='The sum of '
 
-   document.getElementById("fahrenheit").value=z;
+       +x+' and '+y+' is:';
+
+   document.getElementById("fahrenheit").value=f;
+ 
+  document.getElementById("celsiuslabel").innerHTML='The sum of '
+
+       +x+' and '+y+' is:';
+ 
+   document.getElementById("celsius").value=c;
+ 
+ document.getElementById("meterslabel").innerHTML='The sum of '
+
+       +x+' and '+y+' is:';
+
+   document.getElementById("meters").value=m;
+ 
+ document.getElementById("feetlabel").innerHTML='The sum of '
+
+       +x+' and '+y+' is:';
+
+   document.getElementById("feet").value=feet;
+ 
+ 
+ 
+ 
+ 
+
 
 }
-
-</script>
+ </script>
 
 </body>
 
