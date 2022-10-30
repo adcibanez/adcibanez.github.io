@@ -2,11 +2,13 @@
 <html>
 <head>
  <script>
-  function computef1()
+  <script>
+
+function computef1()
 
 {
 
-  var x,y;
+  var x;
 
 
   // Retrieve the user input 
@@ -20,17 +22,111 @@
 
   // Compute the sum
 
-  let z  = (x - 32) * 5/9;
+  let z  = (x-32)*5/9;
 
 
   // Display the result
 
-  document.getElementById("fahrenheitlabel").innerHTML='°C = ';
+  document.getElementById("fahrenheitlabel").innerHTML;
 
    document.getElementById("fahrenheit").value=z;
 
 
 }
+
+ function computec1()
+
+{
+
+  var y;
+
+
+  // Retrieve the user input 
+
+  y = document.getElementById("c2").value*1;  // *1 Converts the result to number
+
+  console.log(y);
+
+  console.logYes;
+
+
+  // Compute the sum
+
+  let yy  = (9/5*y)+32;
+
+
+  // Display the result
+
+  document.getElementById("celsiuslabel").innerHTML;
+
+   document.getElementById("celsius").value=yy;
+
+
+}  
+
+
+ function computem1()
+
+{
+
+  var y;
+
+
+  // Retrieve the user input 
+
+  t = document.getElementById("m3").value*1;  // *1 Converts the result to number
+
+  console.log(t);
+
+  console.logYes;
+
+
+  // Compute the sum
+
+  let feet  = t*3.28084 ;
+
+
+  // Display the result
+
+  document.getElementById("meterslabel").innerHTML;
+
+   document.getElementById("meters").value=feet;
+
+
+}  
+
+
+function computef4()
+
+{
+
+  var y;
+
+
+  // Retrieve the user input 
+
+  w = document.getElementById("f4").value*1;  // *1 Converts the result to number
+
+  console.log(w);
+
+  console.logYes;
+
+
+  // Compute the sum
+
+  let m  = w*0.3048;
+
+
+  // Display the result
+
+  document.getElementById("feetlabel").innerHTML;
+
+   document.getElementById("feet").value=m;
+
+
+}  
+
+</script>
  </script>
 
 </body>
@@ -74,56 +170,49 @@ h1 {letter-spacing: 6px}
 <!-- Photo Grid -->
 <center>
 <h1>1.) Fahrenheit to Celsius </h1>
-     <br>
      <h2>
+     <p>
+     <input id="f1" name="f1" type="number"> <label for="f1">Fahrenheit</label> 
+     
+     <button onclick="computef1()"> Convert Fahrenheit to Celsius</button>
+     </p>
 
-     <label for="f1">°F = </label> 
+     <p>
+     <label for="fahrenheit" id="fahrenheitlabel"></label> 
 
-     <input id="f1" name="f1" type="number">
-
-     <button onclick="computef1()">Convert Fahrenheit to Celsius</button>
-     </h2>
-     <h2>
-
-     <label for="fahrenheit" id="fahrenheitlabel">°C = </label>  
-
-     <input id="fahrenheit" name="fahrenheit" type="number" readonly></input>
-
-     </h2>
-     <br>
+     <input id="fahrenheit" name="fahrenheit" type="number" readonly></input>  <label> °C</label>
+     </p>
 <h1>2.) Celsius to Fahrenheit </h1>
      <br>
      <h2>
+     
+      <input id="c2" name="c2" type="number"> <label for="c2">Celsius</label>
+      <p>
+      <button onclick="computec1()"> Convert Celsius to Fahrenheit</button>
 
-     <label for="c1">°C = </label> 
+      </p>
 
-     <input id="c1" name="c1" type="number">
+      <p>
 
-     <button onclick="computec1()">Convert Celsius to Fahrenheit</button>
-     </h2>
-     <h2>
+      <label for="celsius" id="celsiuslabel"></label>  
 
-     <label for="celsius" id="celsiuslabel">°F = </label>  
-
-     <input id="celsius" name="celsius" type="number" readonly></input>
-
-     </h2>
-     <br>
+      <input id="celsius" name="celsius" type="number" readonly></input> <label> °F</label>
+     
+      </h2>
+      <br>
 <h1>3.) Meters to Feet </h1>
      <br>
      <h2>
 
-     <label for="meters1">Meters: </label> 
+     <input id="m3" name="m3" type="number"> <label for="m3">Meters</label> 
+     <p>
+     <button onclick="computem1()"> Convert Meters to Feet</button>
 
-     <input id="meters1" name="meters1" type="number">
+     </p>
 
-     <button onclick="computem1()"> Compute</button>
-     </h2>
-     <h2>
+     <label for="meters" id="meterslabel"></label>  
 
-     <label for="meters" id="meterslabel"> Feet = </label>  
-
-     <input id="meters" name="meters" type="number" readonly></input>
+     <input id="meters" name="meters" type="number" readonly></input> <label> Feet </label>
 
      </h2>
      <br>
@@ -131,17 +220,15 @@ h1 {letter-spacing: 6px}
      <br>
      <h2>
 
-     <label for="feet1">Number</label> 
+     <input id="f4" name="f4" type="number"> <label for="f4">Feet</label> 
+     <p>
+     <button onclick="computef4()"> Convert Feet to Meters</button>
 
-     <input id="n1" name="n1" type="number">
+     </p>
 
-     <button onclick="computefeet1()"> Compute</button>
-     </h2>
-     <h2>
+     <label for="feet" id="feetlabel"></label>  
 
-     <label for="feet" id="feetlabel">Meters = </label>  
-
-     <input id="feet" name="feet" type="number" readonly></input>
+     <input id="feet" name="feet" type="number" readonly></input> <label> Meters </label>
 
      </h2>
      <br>    
