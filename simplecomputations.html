@@ -8,12 +8,13 @@ function computef1()
 
 {
 
-  var x;
+  var x,a;
 
 
   // Retrieve the user input 
 
   x = document.getElementById("f1").value*1;  // *1 Converts the result to number
+  a = document.getElementById("f1").value*1;
 
   console.log(x);
 
@@ -22,7 +23,7 @@ function computef1()
 
   // Compute the sum
 
-  let z  = (x-32)*5/9;
+  let z  = ((x-32)*(5/9))*a;
 
 
   // Display the result
@@ -38,12 +39,13 @@ function computef1()
 
 {
 
-  var y;
+  var y,bb;
 
 
   // Retrieve the user input 
 
   y = document.getElementById("c2").value*1;  // *1 Converts the result to number
+  bb = document.getElementById("c2").value*1;
 
   console.log(y);
 
@@ -52,7 +54,7 @@ function computef1()
 
   // Compute the sum
 
-  let yy  = (9/5*y)+32;
+  let yy  = ((9/5*y)+32)*bb;
 
 
   // Display the result
@@ -69,12 +71,13 @@ function computef1()
 
 {
 
-  var y;
+  var y,ccc;
 
 
   // Retrieve the user input 
 
   t = document.getElementById("m3").value*1;  // *1 Converts the result to number
+  ccc = document.getElementById("m3").value*1;
 
   console.log(t);
 
@@ -83,7 +86,7 @@ function computef1()
 
   // Compute the sum
 
-  let feet  = t*3.28084 ;
+  let feet  = (t*3.28084)*ccc ;
 
 
   // Display the result
@@ -100,12 +103,13 @@ function computef4()
 
 {
 
-  var y;
+  var y,dddd;
 
 
   // Retrieve the user input 
 
   w = document.getElementById("f4").value*1;  // *1 Converts the result to number
+  dddd = document.getElementById("f4").value*1;
 
   console.log(w);
 
@@ -114,7 +118,7 @@ function computef4()
 
   // Compute the sum
 
-  let m  = w*0.3048;
+  let m  = (w*0.3048)*dddd;
 
 
   // Display the result
@@ -128,7 +132,6 @@ function computef4()
 
 
 </script>
-
 <title>Intro to Computing - Ibañez</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -154,9 +157,9 @@ h1 {letter-spacing: 6px}
   
   <div class="w3-padding-32">
     <div class="w3-bar w3-border">
-      <a href="https://adcibanez.github.io/personal/" class="w3-bar-item w3-button">Home</a>
-      <a href="https://adcibanez.github.io/personal/simplecomputations.html" class="w3-bar-item w3-button w3-light-grey">Simple Computations</a>
-      <a href="#" class="w3-bar-item w3-button">Income Tax Calculator (Coming Soon)</a>
+      <a href="https://adcibanez.w3spaces.com/" class="w3-bar-item w3-button">Home</a>
+      <a href="https://adcibanez.w3spaces.com/simplecomputations.html" class="w3-bar-item w3-button w3-button">Simple Computations</a>
+      <a href="https://adcibanez.w3spaces.com/incometaxcalculator.html" class="w3-bar-item w3-button">Income Tax Calculator</a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small">First N Natural Numbers (Coming Soon)</a>
      <a href="#" class="w3-bar-item w3-button w3-hide-small">Simple Payroll (Coming Soon)</a>
     </div>
