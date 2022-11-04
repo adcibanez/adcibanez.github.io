@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <style>
+
+        #payroll {
+
+          border-collapse: collapse;
+
+          width: 100%;
+          
+
+        }
+
+        
+
+        #payroll td, #payroll th {
+
+          border: 1px solid #000000;
+
+          padding: 8px;
+
+        }
+
+        
+
+        #payroll tr:nth-child(even){background-color: #F8F8F8;}
+
+        #payroll tr:nth-child(odd){background-color: #C0C0C0;}
+
+             
+
+        
+
+        #payroll th {
+
+          padding-top: 12px;
+
+          padding-bottom: 12px;
+
+          text-align: left;
+
+          background-color: #000000;
+
+          color: white;
+
+        }
+
+    </style>
+
+    <title>Intro to Computing - Ibañez</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Raleway", Arial, sans-serif}
+h1 {letter-spacing: 6px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+
+</head>
+
+<body onload="initpayroll()">
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
+  <h1 class="w3-xlarge">Introduction to Computing</h1>
+  <h1>April Ibañez's Website</h1>
+  
+  <div class="w3-padding-32">
+    <div class="w3-bar w3-border">
+      <a href="https://adcibanez.github.io/personal/" class="w3-bar-item w3-button">Home</a>
+      <a href="https://adcibanez.github.io/personal/simplecomputations.html" class="w3-bar-item w3-button">Simple Computations</a>
+      <a href="https://adcibanez.github.io/personal/incometaxcalculator.html" class="w3-bar-item w3-button">Income Tax Calculator</a>
+      <a href="https://adcibanez.github.io/personal/nth.html" class="w3-bar-item w3-button">Nth Factorial, Sum and Average</a>
+      <a href="https://adcibanez.github.io/personal/simplepayroll.html" class="w3-bar-item w3-button">Simple Payroll</a>
+    </div>
+  </div>
+</header>
+<center>
+<h1>Simple Payroll</h1>
+
+
+<p>
+
+<label for="employee">Employee Name:</label>    
+
+<input  id="employee" name="employee"></input>
+
+<br>
+<br>
+
+<label for="days">Days Worked:</label>
+
+<input id="days" name="days" type="number" oninput="computeamount()"></input>
+
+<br>
+<br>
+
+
+<label for="daily">Daily Rate:</label>
+
+<input id="daily" name="daily" type="number" oninput="computeamount()"></input>
+
+<br>
+<br>
+
+
+<label for="deduction">Deduction:</label>
+
+<input id="deduction" name="deduction" type="number" oninput="computededuction()"></input>
+
+<br>
+<br>
+
+
+<button onclick="addemployee()">Add Employee</button>
+
+</p>
+
+<p>
+
+<!--   <button onclick="showpayroll()">Show payroll</button> --> 
+
+<label for="delete">Delete Employee Number:</label>
+
+<input id="delete" name="delete" type="number" ></input>
+
+<button onclick="deleteemployee()" >Delete</button>  
+
+</p>
+
+
+<p id="payroll"></p>
+
+</center>
+
+<script>
+
+    function addemployee(){
+
+         
+
+         var perEmployee = {
+
+             "employee": "1",
+
+             "days": 1,
+
+             "daily": 0,
+
+             "deduction": 0,
+
+             "netpay": 0,
+
+             "grosspay" : function grosspay(){
+
+                 return Math.round(this.daily*this.days*100)/100;  
+
+               }
+
+             
+            }
+
+
+          perEmployee.employee=document.getElementById("employee").value;
+
+          perEmployee.days=document.getElementById("days").value;
+
+          perEmployee.daily=document.getElementById("daily").value;
+
+
+
+
+          console.log(perEmployee.employee);
+
+          console.log(perEmployee.days);
+
+          console.log(perEmployee.daily);
+
+
+
+           payroll.push(perEmployee);
+
+
+;
+
+          showpayroll();
+
+        
+
+    }
+    
+
+    function computeamount() {
+
+          var q,p,i,d;
+
+          q = document.getElementById("days").value*1;
+
+          p = document.getElementById("daily").value*1;
+
+          i = document.getElementById("gross").value*1;
+
+          d = document.getElementById("deduction").value*1;
+
+
+          ;  // rounds off to 2 decimal places
+          console.log (dd)
+          dd = g - 1;
+
+        if (i) {}  
+
+
+  
+
+
+}
+
+
+    function deleteemployee(){
+
+        var todelete;
+
+        var employeeno;
+
+
+        employeeno=document.getElementById("delete").value;
+
+
+        todelete=confirm("Delete Employee Number: "+employeeno+"?");
+
+
+        if (todelete) {
+
+
+             payroll.splice(employeeno-1,1);
+
+             showpayroll();   
+
+        }
+
+
+    }
+
+
+    // Show the contents of the payroll
+
+    function showpayroll(){
+
+
+        var i,l,payrolltext,totalamount,ln;
+
+        var theader,tbody,tb,tfooter;
+
+
+    
+
+        // Generate table header;
+
+        theader ="<thead>";
+
+        theader+="<tr>";
+
+        theader+="<th>No.</th>";
+
+        theader+='<th style="text-align:left" >Employee Name</th>';
+
+        theader+="<th>Days Worked</th>";
+
+        theader+='<th style="text-align:center">Daily Rate</th>';
+
+        theader+='<th style="text-align:center">Gross Pay</th>';
+
+        theader+='<th style="text-align:center">Deduction Amount</th>';
+
+        theader+='<th style="text-align:center">Net Pay</th>';
+
+        theader+="</tr>";
+
+        theader+="</thead>";
+
+        
+
+        // Generate Table Body
+
+        l = payroll.length;
+
+      
+
+        
+
+      //  for (i=0,totalamount=0,payrolltext="",tbody='<tbody id="payroll">';i<l;i++){
+
+        for (i=0,totalamount=0,payrolltext="",tbody='';i<l;i++){
+
+            ln=i+1;    
+
+            tbody += "<tr>"
+
+                +'<td>'+ln+' </td>'
+
+                +'<td>'+payroll[i].employee+' </td>'
+
+                +'<td style="text-align:right">'+payroll[i].days+'</td>'
+
+                +'<td style="text-align:right">'+payroll[i].daily+'</td>'
+
+                +'<td style="text-align:right">'+payroll[i].grosspay()+'</td>'
+
+                +'<td style="text-align:right">'+payroll[i].deduction+'</td>'
+                                
+                +'<td style="text-align:right">'+payroll[i].grosspay()+'</td>'
+
+                +"</tr>";
+
+                       
+
+            
+
+        
+
+
+        }
+
+
+       // tbody += "</tbody>";
+
+
+        // Generate table footer;
+
+       console.log(theader+tbody+tfooter);
+
+        document.getElementById("payroll").innerHTML=
+
+           '<table>'+theader+tbody+'</table>';
+
+
+
+    }
+
+  
+
+// Global variable
+
+var payroll = []; 
+
+
+</script>
+
+</body>
+
+</html>
